@@ -23,20 +23,6 @@ app.use(express.static(publicDir))
 app.get('' , (req , res) =>{
     res.render('index' , {
         title : 'Weather App',
-        name : 'Created by Sahil'
-    })
-})
-
-app.get('/about' , (req,res) =>{
-    res.render('about',{
-        title: 'About Me' ,
-        name: 'Created by Sahil'
-    })
-})
-
-app.get('/help' , (req, res) =>{
-    res.render('help',{
-        title: 'Help'
     })
 })
 
@@ -55,30 +41,18 @@ app.get('/weather' , (req , res) =>{
                     Location :data.location ,
                     Forecast : forecastData
                 })
-                //console.log(forecastData)
             }
             else if(data === forecastData){
                 res.send({
                     Error: data
                 })
-                //console.log(data)
-                //console.log(forecastData)
             }
             else{
                 res.send({
                     Error: forecastData
-                })
-                // console.log(data)
-                // console.log(forecastData)   
+                }) 
             }
         })
-    })
-})
-
-app.get('/product',(req,res)=>{
-    console.log(req.query)
-    res.send({
-        product:[]
     })
 })
 
