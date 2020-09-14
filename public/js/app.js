@@ -1,5 +1,5 @@
 const myFetch = async (location) =>{
-    const response = await fetch(`http://localhost:3000/weather?address=${location}`)
+    const response = await fetch(`/weather?address=${location}`)
     const jsondata = await response.json()
     if(jsondata.Error){
         msg1.textContent = (jsondata.Error)
