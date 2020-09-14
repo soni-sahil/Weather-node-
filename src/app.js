@@ -71,12 +71,6 @@ app.get('/weather' , (req , res) =>{
             }
         })
     })
-
-    // res.send({
-    //     forecast: "asjdkjsh",
-    //     location: 'djkhsdkj' ,
-    //     address : req.query.address
-    // })
 })
 
 app.get('/product',(req,res)=>{
